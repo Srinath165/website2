@@ -18,6 +18,9 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <!-- JavaScript -->
     <script defer src="assets/js/script.js"></script>
 
@@ -25,6 +28,112 @@
     <style>
         html {
             scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+        }
+        .hero {
+            position: relative;
+            background-image: url('assets/images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+        }
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .navbar {
+            background-color: #333;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar .logo {
+            color: #fff;
+            font-size: 1.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            justify-content: flex-end;
+        }
+        .navbar ul li {
+            margin: 0 20px;
+        }
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .navbar ul li a:hover {
+            color: #f1c40f;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5em;
+            margin-left: 15px;
+        }
+        .social-icons a:hover {
+            color: #f1c40f;
+        }
+        .about, .contact, .courses {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .about-image {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
@@ -40,18 +149,10 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="social-icons">
-            <a href="https://www.facebook.com/raptorsclub" aria-label="Facebook">
-                <i class="fab fa-facebook" alt="Facebook"></i>
-            </a>
-            <a href="https://twitter.com/raptorsclub" aria-label="Twitter">
-                <i class="fab fa-twitter" alt="Twitter"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/raptorsclub" aria-label="LinkedIn">
-                <i class="fab fa-linkedin" alt="LinkedIn"></i>
-            </a>
-            <a href="https://www.instagram.com/raptorsclub" aria-label="Instagram">
-                <i class="fab fa-instagram" alt="Instagram"></i>
-            </a>
+            <a href="https://www.facebook.com/raptorsclub" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/raptorsclub" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/raptorsclub" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/raptorsclub" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
     </nav>
 
@@ -76,10 +177,24 @@
         <a href="about.html" class="btn">Read More</a>
     </section>
 
-    <!-- Courses Section -->
+    <!-- Divisions Section -->
     <section id="courses" class="courses">
         <h2>Our Divisions</h2>
         <p>Explore various aeronautics courses designed for hands-on learning and innovation.</p>
+        <div class="division-cards">
+            <div class="division-card">
+                <h3>Fixed Wing ✈️</h3>
+                <p>Explore the world of fixed-wing aircraft, from airliners to unmanned aerial vehicles. Learn the principles behind their design and flight mechanics.</p>
+            </div>
+            <div class="division-card">
+                <h3>Rotary Wing 🚁</h3>
+                <p>Study helicopters and rotorcraft that rely on rotating blades to achieve lift. Discover their vertical takeoff and maneuverability capabilities.</p>
+            </div>
+            <div class="division-card">
+                <h3>Rocketry 🚀</h3>
+                <p>Engage in rocket design and propulsion systems for space exploration, high-speed travel, and scientific research.</p>
+            </div>
+        </div>
         <a href="courses.html" class="btn">View Courses</a>
     </section>
 
